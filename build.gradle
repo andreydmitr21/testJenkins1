@@ -1,0 +1,19 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+group 'andreydmitr20'
+version '1.0'
+
+dependencies {
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter:$junitVersion',
+             'org.slf4j:slf4j-simple:$slf4jVersion'
+
+
+    )
+}
