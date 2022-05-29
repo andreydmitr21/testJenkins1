@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'io.qameta.allure' version '2.9.6'
 }
 
 repositories {
@@ -9,20 +10,32 @@ repositories {
 group 'andreydmitr20'
 version '1.0'
 
-def junitVersion="5.8.2",
-slf4jVersion="1.7.36"
+def junitVersion = "5.8.2",
+    slf4jVersion = "1.7.36",
+    allureVersion = "2.17.3"
 
 dependencies {
     testImplementation(
             "org.junit.jupiter:junit-jupiter:$junitVersion",
-             "org.slf4j:slf4j-simple:$slf4jVersion"
-
-
+            "org.slf4j:slf4j-simple:$slf4jVersion"
     )
 }
+allure {
+    report {
+        version.set(allureVersion)
+    }
+    adapter {
+        aspectjWeaver.set(true)
+        frameworks {
+            junit5 {
+                adapterVersion.set(allureVersion)
+            }
+        }
+    }
+}
 
-tasks.withType(JavaCompile){
-    options.encoding='UTF-8'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 test {
@@ -30,7 +43,7 @@ test {
 
     testLogging {
         lifecycle {
-            events "started","skipped", "failed", "standard_error", "standard_out"
+            events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
     }
