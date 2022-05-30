@@ -12,8 +12,9 @@ import static io.qameta.allure.Allure.step;
 @Tag("demoqa")
 public class SelenideTests extends TestBase{
 
-    @DisplayName("Github test")
     @Test
+    @DisplayName("Github test")
+
     void shouldFindSelenideInGithub() {
 
         // open
