@@ -13,7 +13,7 @@ version '1.0'
 def junitVersion = "5.8.2",
     slf4jVersion = "1.7.36",
     allureVersion = "2.17.3",
-    selenideVersion="6.4.0"
+    selenideVersion = "6.4.0"
 
 dependencies {
     testImplementation(
@@ -37,10 +37,15 @@ allure {
     }
 }
 
-task demoqa_tests(type: Test){
+task demoqa_tests(type: Test) {
     useJUnitPlatform {
         includeTags("demoqa")
         excludeTags("simple")
+    }
+}
+task test5(type: Test) {
+    useJUnitPlatform {
+        includeTags("test5")
     }
 }
 tasks.withType(JavaCompile) {
