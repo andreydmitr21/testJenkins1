@@ -9,12 +9,11 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
 @Tag("demoqa")
-public class SelenideTests {
+public class SelenideTests extends TestBase{
 
     @Test
     void shouldFindSelenideInGithub() {
-        Configuration.baseUrl = " https://github.com";
-        Configuration.browserSize = "1920x1080";
+
         // open
         step("Open", () -> {
             open("/");
