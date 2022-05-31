@@ -22,9 +22,11 @@ public class SystemProperties {
         String browser = System.getProperty("browser","chrome");
         String ver = System.getProperty("version","100");
         String browserSize = System.getProperty("browserSize","1280x1024");
+        String anyText = System.getProperty("anyText","any");
         System.out.println(browser);
         System.out.println(ver);
         System.out.println(browserSize);
+        System.out.println(anyText);
     }
 
 
