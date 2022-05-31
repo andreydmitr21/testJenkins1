@@ -1,3 +1,4 @@
+src/test/resources/config/credentials.properties
 # Compiled class file
 *.class
 
@@ -34,4 +35,4 @@ target/
 .allure/
 !gradlew*
 !gradle-wrapper.properties
-resources/config/credentials.properties
+
