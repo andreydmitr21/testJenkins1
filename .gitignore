@@ -34,4 +34,4 @@ target/
 .allure/
 !gradlew*
 !gradle-wrapper.properties
-credentials.properties
+src/test/resources/config/credentials.properties
