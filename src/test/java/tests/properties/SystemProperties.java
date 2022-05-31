@@ -4,6 +4,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+
+@Tag("test5")
 public class SystemProperties {
 
 
@@ -14,7 +16,7 @@ public class SystemProperties {
     }
 
     @Test
-    @Tag("test5")
+
     @DisplayName("TEST5")
     void someTest2() {
         String browser = System.getProperty("browser","chrome");
