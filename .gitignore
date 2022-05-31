@@ -34,3 +34,4 @@ target/
 .allure/
 !gradlew*
 !gradle-wrapper.properties
+credential.properties
