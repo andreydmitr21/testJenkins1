@@ -8,6 +8,7 @@ public class OwnerTests {
     void loginTest() {
         String login = "";
         String password = "";
+
         System.out.println("Login: " + login);
         System.out.println("Pass: " + password);
 
