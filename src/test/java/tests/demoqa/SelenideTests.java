@@ -23,7 +23,7 @@ public class SelenideTests extends TestBase{
         });
 
         step("Search", () -> {
-            $("[data-test-selector=nav-search-inpu]")
+            $("[data-test-selector=nav-search-input]")
                     .setValue("selenide")
                     .pressEnter();
         });
