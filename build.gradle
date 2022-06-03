@@ -40,9 +40,9 @@ allure {
     }
 }
 
-task owner(type: Test) {
+task demoqa(type: Test) {
     useJUnitPlatform {
-        includeTags("owner")
+        includeTags("demoqa")
         excludeTags("simple")
     }
 }
